@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ronit Shikalgar — Content Strategist &amp; Marketer</title>
+  <meta name="description"
+    content="Content strategist & marketer driving brand value, digital visibility, and revenue-focused acquisition — social media, performance ads, GMB & local SEO, content and automation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --plaster: #EAE5DC;
+      --plaster-deep: #DFD8CC;
+      --ink: #17130E;
+      --ink-soft: #4A4238;
+      --oxide: #A8401E;
+      --clay-blue: #8FA3B8;
+      --clay-sage: #9AA88F;
+      --clay-rose: #C9A18F;
+      --line: rgba(23, 19, 14, .16);
+      --radius: 20px;
+      --pad: clamp(20px, 5vw, 72px);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background: var(--plaster);
+      color: var(--ink);
+      font-family: 'Archivo', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--oxide);
+      color: var(--plaster)
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    /* ---------- utilities ---------- */
+    .wrap {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 var(--pad)
+    }
+
+    .mono {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase
+    }
+
+    .display {
+      font-family: 'Anton', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      line-height: .95;
+      letter-spacing: .01em
+    }
+
+    .glyph {
+      color: var(--oxide);
+      font-size: .85em;
+      margin-right: .5em
+    }
+
+    section {
+      padding: clamp(64px, 9vw, 130px) 0;
+      position: relative
+    }
+
+    section[id] {
+      scroll-margin-top: 76px
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 32px;
+      margin-bottom: clamp(36px, 5vw, 64px);
+      flex-wrap: wrap
+    }
+
+    .section-head h2 {
+      font-size: clamp(44px, 7vw, 96px)
+    }
+
+    .section-head p {
+      max-width: 360px;
+      color: var(--ink-soft)
+    }
+
+    .rule {
+      border: none;
+      border-top: 1px solid var(--line)
+    }
+
+    /* ---------- buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--ink);
+      color: var(--plaster);
+      padding: 16px 30px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 15px;
+      overflow: hidden;
+      position: relative;
+      transition: transform .3s cubic-bezier(.2, .8, .2, 1), background .3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn .flip {
+      display: inline-block;
+      position: relative;
+      height: 1.2em;
+      overflow: hidden
+    }
+
+    .btn .flip span {
+      display: block;
+      transition: transform .35s cubic-bezier(.7, 0, .2, 1)
+    }
+
+    .btn:hover .flip span {
+      transform: translateY(-100%)
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: var(--oxide)
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--ink)
+    }
+
+    .btn.ghost:hover {
+      background: var(--ink);
+      color: var(--plaster)
+    }
+
+    .btn:focus-visible,
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--oxide);
+      outline-offset: 3px
+    }
+
+    /* ---------- nav ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px var(--pad);
+      background: color-mix(in srgb, var(--plaster) 82%, transparent);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      font-family: 'Anton', sans-serif;
+      font-size: 20px;
+      letter-spacing: .04em
+    }
+
+    .logo sup {
+      font-size: 10px;
+      color: var(--oxide)
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 15px;
+      position: relative
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: var(--oxide);
+      transition: width .25s
+    }
+
+    .nav-links a:hover::after {
+      width: 100%
+    }
+
+    .nav-cta {
+      background: var(--ink);
+      color: var(--plaster);
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-size: 14px
+    }
+
+    .nav-cta:hover {
+      background: var(--oxide)
+    }
+
+    .nav-cta::after {
+      display: none
+    }
+
+    .menu-btn {
+      display: none;
+      background: var(--ink);
+      color: var(--plaster);
+      border: none;
+      border-radius: 100px;
+      padding: 10px 18px;
+      font: 600 14px 'Archivo', sans-serif;
+      cursor: pointer;
+    }
+
+    @media(max-width:760px) {
+      .menu-btn {
+        display: inline-flex;
+        align-items: center
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--plaster);
+        border-bottom: 1px solid var(--line);
+        padding: 6px var(--pad) 24px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-12px);
+        transition: opacity .3s, transform .3s, visibility .3s;
+      }
+
+      nav.open .nav-links {
+        opacity: 1;
+        visibility: visible;
+        transform: none
+      }
+
+      .nav-links a {
+        padding: 14px 0;
+        border-bottom: 1px dashed var(--line);
+        font-size: 17px
+      }
+
+      .nav-links a::after {
+        display: none
+      }
+
+      .nav-links .nav-cta {
+        margin-top: 14px;
+        text-align: center;
+        padding: 14px 20px;
+        border-bottom: none
+      }
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      padding: 0;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative
+    }
+
+    #clay {
+      position: absolute;
+      inset: 0;
+      z-index: 0
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      padding: 120px var(--pad) 40px;
+      pointer-events: none
+    }
+
+    .hero-inner a,
+    .hero-inner .btn {
+      pointer-events: auto
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 20px
+    }
+
+    .hero-tags span {
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--plaster) 65%, transparent);
+      backdrop-filter: blur(6px);
+      padding: 7px 16px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500
+    }
+
+    .hero h1 {
+      font-size: clamp(72px, 17vw, 260px);
+      margin-left: -.04em;
+      color: var(--ink);
+    }
+
+    .hero h1 .tm {
+      font-size: .15em;
+      vertical-align: super;
+      color: var(--oxide)
+    }
+
+    .hero-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 20px
+    }
+
+    .hero-row h2 {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(22px, 3vw, 38px);
+      text-transform: uppercase;
+      line-height: 1.05;
+      max-width: 520px
+    }
+
+    .hero-row h2 em {
+      font-style: normal;
+      color: var(--oxide)
+    }
+
+    .hero-sub {
+      max-width: 380px;
+      color: var(--ink-soft)
+    }
+
+    .scroll-hint {
+      position: absolute;
+      right: var(--pad);
+      top: 50%;
+      z-index: 2;
+      writing-mode: vertical-rl;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .2em;
+      color: var(--ink-soft)
+    }
+
+    @media(max-width:1100px) {
+      .scroll-hint {
+        display: none
+      }
+    }
+
+    /* ---------- marquee ---------- */
+    .marquee {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--ink);
+      color: var(--plaster);
+      overflow: hidden;
+      padding: 18px 0
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 56px;
+      width: max-content;
+      animation: scroll 28s linear infinite;
+      white-space: nowrap
+    }
+
+    .marquee-track span {
+      font-family: 'Anton', sans-serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: .06em
+    }
+
+    .marquee-track i {
+      color: var(--oxide);
+      font-style: normal
+    }
+
+    @keyframes scroll {
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* ---------- manifesto ---------- */
+    .manifesto .mono {
+      color: var(--oxide);
+      margin-bottom: 22px;
+      display: block
+    }
+
+    .manifesto h2 {
+      font-size: clamp(30px, 4.6vw, 60px);
+      font-weight: 600;
+      line-height: 1.15;
+      max-width: 1000px;
+      font-family: 'Archivo', sans-serif
+    }
+
+    .manifesto h2 b {
+      color: var(--oxide);
+      font-weight: 600
+    }
+
+    /* ---------- facts ---------- */
+    .fact {
+      background: var(--plaster-deep);
+      border-radius: var(--radius);
+      padding: clamp(32px, 5vw, 64px);
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .fact+.fact {
+      margin-top: 24px
+    }
+
+    .fact .num {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(72px, 11vw, 160px);
+      line-height: 1;
+      color: var(--oxide)
+    }
+
+    .fact .num small {
+      font-size: .4em;
+      color: var(--ink)
+    }
+
+    .fact p {
+      font-size: clamp(18px, 2vw, 24px);
+      font-weight: 500;
+      max-width: 420px
+    }
+
+    @media(max-width:760px) {
+      .fact {
+        grid-template-columns: 1fr;
+        gap: 12px
+      }
+    }
+
+    /* ---------- projects ---------- */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden
+    }
+
+    .proj {
+      background: var(--plaster);
+      padding: clamp(28px, 3.6vw, 48px);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-height: 220px;
+      transition: background .3s;
+      position: relative;
+    }
+
+    .proj:hover {
+      background: var(--plaster-deep)
+    }
+
+    .proj .mono {
+      color: var(--oxide);
+      padding-right: 40px
+    }
+
+    .proj h3 {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(22px, 2.6vw, 32px);
+      text-transform: uppercase
+    }
+
+    .proj p {
+      color: var(--ink-soft);
+      font-size: 15px
+    }
+
+    .proj .arrow {
+      position: absolute;
+      top: 28px;
+      right: 28px;
+      font-size: 20px;
+      transition: transform .3s
+    }
+
+    .proj:hover .arrow {
+      transform: translate(4px, -4px);
+      color: var(--oxide)
+    }
+
+    @media(max-width:760px) {
+      .proj-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* ---------- services ---------- */
+    .services {
+      background: var(--ink);
+      color: var(--plaster)
+    }
+
+    .services .section-head p {
+      color: rgba(234, 229, 220, .65)
+    }
+
+    .svc {
+      border-top: 1px solid rgba(234, 229, 220, .18);
+      padding: clamp(28px, 4vw, 44px) 0;
+      display: grid;
+      grid-template-columns: 80px 1.1fr 1.6fr;
+      gap: 24px;
+      align-items: start
+    }
+
+    .svc:last-of-type {
+      border-bottom: 1px solid rgba(234, 229, 220, .18)
+    }
+
+    .svc .idx {
+      font-family: 'Space Mono', monospace;
+      color: var(--oxide);
+      font-size: 14px;
+      padding-top: 8px
+    }
+
+    .svc h3 {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(26px, 3.4vw, 44px);
+      text-transform: uppercase;
+      line-height: 1
+    }
+
+    .svc ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px
+    }
+
+    .svc li {
+      border: 1px solid rgba(234, 229, 220, .28);
+      border-radius: 100px;
+      padding: 8px 18px;
+      font-size: 14px;
+      transition: background .25s, color .25s
+    }
+
+    .svc li:hover {
+      background: var(--plaster);
+      color: var(--ink)
+    }
+
+    .svc li::before {
+      content: "✦ ";
+      color: var(--oxide)
+    }
+
+    @media(max-width:860px) {
+      .svc {
+        grid-template-columns: 1fr;
+        gap: 14px
+      }
+
+      .svc .idx {
+        padding: 0
+      }
+    }
+
+    /* ---------- pricing ---------- */
+    .price-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px
+    }
+
+    .price-card {
+      border: 1px solid var(--ink);
+      border-radius: var(--radius);
+      padding: clamp(28px, 3.6vw, 48px);
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      background: var(--plaster);
+    }
+
+    .price-card.feature {
+      background: var(--ink);
+      color: var(--plaster)
+    }
+
+    .price-card h3 {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(24px, 2.8vw, 36px);
+      text-transform: uppercase
+    }
+
+    .price-card .tag {
+      align-self: flex-start;
+      background: var(--oxide);
+      color: var(--plaster);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase
+    }
+
+    .price-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 15px
+    }
+
+    .price-card li::before {
+      content: "✦ ";
+      color: var(--oxide)
+    }
+
+    .price {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(44px, 5vw, 68px);
+      line-height: 1;
+      margin-top: auto
+    }
+
+    .price small {
+      font-size: 16px;
+      font-family: 'Archivo', sans-serif;
+      font-weight: 500;
+      opacity: .7
+    }
+
+    .price-card .btn {
+      align-self: flex-start
+    }
+
+    .price-card.feature .btn {
+      background: var(--plaster);
+      color: var(--ink)
+    }
+
+    .price-card.feature .btn:hover {
+      background: var(--oxide);
+      color: var(--plaster)
+    }
+
+    @media(max-width:860px) {
+      .price-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* ---------- testimonials ---------- */
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px
+    }
+
+    .testi {
+      background: var(--plaster-deep);
+      border-radius: var(--radius);
+      padding: clamp(26px, 3vw, 40px);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .testi h3 {
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 1.35
+    }
+
+    .testi p {
+      color: var(--ink-soft);
+      font-size: 15px;
+      flex: 1
+    }
+
+    .testi .who {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      border-top: 1px solid var(--line);
+      padding-top: 16px
+    }
+
+    .testi .who b {
+      font-size: 15px
+    }
+
+    .testi .who span {
+      font-size: 13px;
+      color: var(--ink-soft)
+    }
+
+    @media(max-width:960px) {
+      .testi-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* ---------- process ---------- */
+    .phase {
+      border-top: 1px solid var(--line);
+      padding: clamp(28px, 4vw, 44px) 0;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 32px
+    }
+
+    .phase:last-of-type {
+      border-bottom: 1px solid var(--line)
+    }
+
+    .phase-label .mono {
+      color: var(--oxide)
+    }
+
+    .phase-label h3 {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(26px, 3vw, 40px);
+      text-transform: uppercase
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 1fr 120px;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px dashed var(--line)
+    }
+
+    .step:last-child {
+      border-bottom: none
+    }
+
+    .step h4 {
+      font-size: 16px;
+      font-weight: 600
+    }
+
+    .step p {
+      font-size: 14px;
+      color: var(--ink-soft);
+      margin-top: 4px
+    }
+
+    .step .dur {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: var(--oxide);
+      text-align: right
+    }
+
+    @media(max-width:760px) {
+      .phase {
+        grid-template-columns: 1fr;
+        gap: 12px
+      }
+
+      .step {
+        grid-template-columns: 1fr
+      }
+
+      .step .dur {
+        text-align: left
+      }
+    }
+
+    /* ---------- stats ---------- */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden
+    }
+
+    .stat {
+      background: var(--plaster);
+      padding: clamp(26px, 3vw, 44px);
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .stat .num {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(48px, 6vw, 84px);
+      line-height: 1;
+      color: var(--oxide)
+    }
+
+    .stat h3 {
+      font-size: 16px;
+      font-weight: 600
+    }
+
+    .stat p {
+      font-size: 13.5px;
+      color: var(--ink-soft)
+    }
+
+    @media(max-width:960px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media(max-width:560px) {
+      .stats-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq-item {
+      border-top: 1px solid var(--line)
+    }
+
+    .faq-item:last-of-type {
+      border-bottom: 1px solid var(--line)
+    }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 26px 0;
+      font: inherit;
+      font-weight: 600;
+      font-size: clamp(17px, 2vw, 21px);
+      color: var(--ink);
+      text-align: left;
+    }
+
+    .faq-q .mono {
+      color: var(--oxide)
+    }
+
+    .faq-q .plus {
+      font-size: 24px;
+      font-weight: 400;
+      transition: transform .3s;
+      color: var(--oxide)
+    }
+
+    .faq-item.open .plus {
+      transform: rotate(45deg)
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease;
+      color: var(--ink-soft);
+      max-width: 760px
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 520px
+    }
+
+    .faq-a p {
+      padding-bottom: 26px
+    }
+
+    /* ---------- contact ---------- */
+    .contact {
+      background: var(--ink);
+      color: var(--plaster);
+      border-radius: var(--radius) var(--radius) 0 0
+    }
+
+    .contact h2 {
+      font-size: clamp(52px, 10vw, 140px);
+      margin-bottom: 32px
+    }
+
+    .contact h2 em {
+      font-style: normal;
+      color: var(--oxide)
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 48px;
+      align-items: start
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      font-size: clamp(18px, 2.4vw, 26px);
+      font-weight: 500
+    }
+
+    .contact-list a {
+      border-bottom: 1px solid rgba(234, 229, 220, .3);
+      align-self: flex-start;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+      transition: color .25s, border-color .25s
+    }
+
+    .contact-list a:hover {
+      color: var(--oxide);
+      border-color: var(--oxide)
+    }
+
+    .contact-side {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      color: rgba(234, 229, 220, .7)
+    }
+
+    .contact-side .mono {
+      color: var(--oxide)
+    }
+
+    @media(max-width:860px) {
+      .contact-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* ---------- footer ---------- */
+    footer {
+      background: var(--ink);
+      color: rgba(234, 229, 220, .6);
+      padding: 40px var(--pad);
+      border-top: 1px solid rgba(234, 229, 220, .15)
+    }
+
+    .foot-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 13px
+    }
+
+    .foot-row a:hover {
+      color: var(--oxide)
+    }
+
+    /* ---------- reveal ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none
+    }
+
+    .reveal-x {
+      opacity: 0;
+      transform: translateX(-56px);
+      transition: opacity .7s ease, transform .7s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    .reveal-x.in {
+      opacity: 1;
+      transform: none
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important
+      }
+
+      .reveal,
+      .reveal-x {
+        opacity: 1;
+        transform: none
+      }
+
+      html {
+        scroll-behavior: auto
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a class="logo" href="#top">RONIT<sup>™</sup></a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#experience">Experience</a>
+      <a href="#pricing">Pricing</a>
+      <a class="nav-cta" href="mailto:ronitshikalgar20599@gmail.com">Contact</a>
+    </div>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">Menu</button>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero" id="top">
+    <div id="clay" aria-hidden="true"></div>
+    <div class="scroll-hint">SCROLL — 0 → 1</div>
+    <div class="hero-inner">
+      <div class="hero-tags">
+        <span>Social Media</span><span>Performance Ads</span><span>GMB &amp; Local
+          SEO</span><span>Content</span><span>Automation</span><span>Design</span>
+      </div>
+      <h1 class="display">RONIT<span class="tm"></span></h1>
+      <div class="hero-row">
+        <h2>Content Strategist &amp; <em>Marketer</em></h2>
+        <p class="hero-sub">Driving brand value, digital visibility, and revenue-focused acquisition — for clinics and
+          retail brands.</p>
+        <a class="btn" href="#pricing"><span class="flip"><span>See pricing<br>See pricing</span></span> →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MARQUEE ================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Jhansi Orthopaedic Hospital</span><i>✦</i>
+      <span>The Perfect Smile</span><i>✦</i>
+      <span>Zawar's Dental Clinic</span><i>✦</i>
+      <span>Metro Footwear</span><i>✦</i>
+      <span>Dr. Ravindra Patil</span><i>✦</i>
+      <span>Aparna Store</span><i>✦</i>
+      <span>Jhansi Orthopaedic Hospital</span><i>✦</i>
+      <span>The Perfect Smile</span><i>✦</i>
+      <span>Zawar's Dental Clinic</span><i>✦</i>
+      <span>Metro Footwear</span><i>✦</i>
+      <span>Dr. Ravindra Patil</span><i>✦</i>
+      <span>Aparna Store</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ================= MANIFESTO ================= -->
+  <section class="manifesto">
+    <div class="wrap reveal">
+      <span class="mono">Trusted by doctors &amp; retailers</span>
+      <h2>I manage <b>6+ client accounts simultaneously</b> across healthcare, dental and retail — handling everything
+        from ad spend to GMB rankings to the Reel that goes out on Friday.</h2>
+    </div>
+  </section>
+
+  <!-- ================= FACTS ================= -->
+  <!-- <section style="padding-top:0">
+  <div class="wrap">
+    <div class="fact reveal">
+      <div><span class="mono" style="color:var(--oxide)">Fact 01</span>
+        <div class="num" data-count="329">0<small> leads</small></div></div>
+      <p>CRM records verified, cleaned and analyzed into a single appointment report for Jhansi Orthopaedic Hospital.</p>
+    </div>
+    <div class="fact reveal">
+      <div><span class="mono" style="color:var(--oxide)">Fact 02</span>
+        <div class="num" data-count="6">0<small> verticals</small></div></div>
+      <p>Healthcare, dental, orthopaedic, neuro, footwear retail and grocery — one marketer, many playbooks.</p>
+    </div>
+  </div>
+</section> -->
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="work" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal-x">
+        <h2 class="display">Selected<br>work</h2>
+        <p>Real client systems — campaigns, reporting engines and automations that ran in production, not concepts.</p>
+      </div>
+      <div class="proj-grid reveal-x">
+        <a class="proj" href="mailto:ronitshikalgar20599@gmail.com?subject=Case study: Perfect Smile">
+          <span class="mono">Meta + Google Ads · Dental · 10 months</span>
+          <h3>The Perfect Smile Dental Clinic</h3>
+          <p>Meta &amp; Google campaigns, an invisible-aligner Click-to-WhatsApp funnel, social management and premium
+            creatives — a steady channel of quality patient enquiries.</p>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="proj" href="mailto:ronitshikalgar20599@gmail.com?subject=Case study: JOH reporting">
+          <span class="mono">Reporting · Healthcare</span>
+          <h3>Monthly performance engine</h3>
+          <p>A repeatable reporting system for Jhansi Orthopaedic Hospital covering social, WhatsApp broadcasting, GMB
+            and keyword positions.</p>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="proj" href="mailto:ronitshikalgar20599@gmail.com?subject=Case study: LinkedIn automation">
+          <span class="mono">Automation · AI</span>
+          <h3>LinkedIn content pipeline</h3>
+          <p>Groq + Make.com + Hugging Face pipeline that drafts, routes for approval, and publishes LinkedIn content
+            hands-free.</p>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="proj" href="mailto:ronitshikalgar20599@gmail.com?subject=Case study: Metro Footwear">
+          <span class="mono">Social · Retail</span>
+          <h3>Metro Footwear &amp; Leather Store</h3>
+          <p>Wedding-season campaigns and creatives built on consumer psychology — stronger engagement and a brand
+            presence to match the store's reputation.</p>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="proj" href="mailto:ronitshikalgar20599@gmail.com?subject=Case study: Dr. Ravindra Patil">
+          <span class="mono">Content · Healthcare · Ongoing</span>
+          <h3>Dr. Ravindra Patil — Neurosurgeon</h3>
+          <p>Educational neurosurgery content and a professional social presence — complex medical topics made legible
+            and trustworthy for patients.</p>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="proj" href="mailto:ronitshikalgar20599@gmail.com?subject=Case study: Local SEO">
+          <span class="mono">GMB · Local SEO</span>
+          <h3>Local visibility system</h3>
+          <p>A productized GMB audit + monthly optimization loop that moves clinics up the Map Pack for the searches
+            patients actually make.</p>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head reveal-x">
+        <h2 class="display">Services</h2>
+        <p>Six pillars, one goal: enquiries you can count. Every service ships with reporting you can actually read.
+        </p>
+      </div>
+      <div class="svc reveal-x">
+        <span class="idx">01</span>
+        <h3>Social media management</h3>
+        <ul>
+          <li>Content calendars</li>
+          <li>Reels &amp; carousels</li>
+          <li>Hinglish / Marathi / English</li>
+          <li>Community management</li>
+          <li>Competitive audits</li>
+        </ul>
+      </div>
+      <div class="svc reveal-x">
+        <span class="idx">02</span>
+        <h3>Performance marketing</h3>
+        <ul>
+          <li>Meta Ads</li>
+          <li>Google Ads</li>
+          <li>Click-to-WhatsApp funnels</li>
+          <li>Lead quality tracking</li>
+        </ul>
+      </div>
+      <div class="svc reveal-x">
+        <span class="idx">03</span>
+        <h3>GMB &amp; local SEO</h3>
+        <ul>
+          <li>Profile audits</li>
+          <li>Map Pack ranking</li>
+          <li>Review strategy</li>
+          <li>Local keywords</li>
+          <li>NAP consistency</li>
+          <li>AI answer-engine visibility</li>
+        </ul>
+      </div>
+      <div class="svc reveal-x">
+        <span class="idx">04</span>
+        <h3>Content production</h3>
+        <ul>
+          <li>Reel scripts</li>
+          <li>31-day script calendars</li>
+          <li>UGC direction</li>
+          <li>Thumbnails</li>
+          <li>Case study formats</li>
+          <li>Patient-education video</li>
+        </ul>
+      </div>
+      <div class="svc reveal-x">
+        <span class="idx">05</span>
+        <h3>Marketing automation</h3>
+        <ul>
+          <li>Make.com workflows</li>
+          <li>Lead routing</li>
+          <li>WhatsApp broadcasting</li>
+          <li>CRM cleanup &amp; analysis</li>
+          <li>AI content pipelines</li>
+        </ul>
+      </div>
+      <div class="svc reveal-x">
+        <span class="idx">06</span>
+        <h3>Design &amp; coordination</h3>
+        <ul>
+          <li>Canva &amp; CapCut creatives</li>
+          <li>Multimedia editing</li>
+          <li>Cross-functional campaigns</li>
+          <li>Client deliverables</li>
+          <li>Creative direction</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRICING ================= -->
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="display">Simple<br>pricing</h2>
+        <p>Built for clinics and local brands that want a marketer on tap — without hiring a full team.</p>
+      </div>
+      <div class="price-grid reveal">
+        <div class="price-card feature">
+          <span class="tag">Most popular</span>
+          <h3>Monthly retainer</h3>
+          <p style="color:rgba(234,229,220,.7)">Ongoing management of your social, ads and Google Business Profile — one
+            dedicated marketer, one monthly report.</p>
+          <ul>
+            <li>Social media + GMB managed monthly</li>
+            <li>1 ad campaign live &amp; optimized</li>
+            <li>Monthly performance report</li>
+            <li>WhatsApp support, pause anytime</li>
+          </ul>
+          <div class="price">₹18,000<small> /month</small></div>
+          <a class="btn" href="mailto:ronitshikalgar20599@gmail.com?subject=Monthly retainer enquiry"><span
+              class="flip"><span>Start now<br>Start now</span></span> →</a>
+        </div>
+        <div class="price-card">
+          <h3>One-off project</h3>
+          <p style="color:var(--ink-soft)">Fixed scope, fixed price — perfect for a launch campaign, a local visibility
+            audit, or a full profile rebuild.</p>
+          <ul>
+            <li>Local visibility audit + action plan</li>
+            <li>Campaign setup (Meta / Google)</li>
+            <li>Clear timeline &amp; milestones</li>
+            <li>Handoff docs your team can run</li>
+          </ul>
+          <div class="price"><small>Starts at </small>₹12,000</div>
+          <a class="btn ghost" href="mailto:ronitshikalgar20599@gmail.com?subject=Project enquiry"><span
+              class="flip"><span>Book a call<br>Book a call</span></span> →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal-x">
+        <h2 class="display">Clients</h2>
+        <p>Words from the doctors and owners I've worked with.</p>
+      </div>
+      <div class="testi-grid reveal-x">
+        <div class="testi">
+          <h3>"Working with Ronit has significantly improved our digital presence."</h3>
+          <p>From creating educational healthcare content to managing our social media professionally, he understands
+            how to communicate complex medical topics in a way that patients can easily understand. His creativity,
+            consistency and dedication have made him a valuable part of our team.</p>
+          <div class="who"><b>Dr. Ravindra Patil</b><span>Consultant Neurosurgeon</span></div>
+        </div>
+        <div class="testi">
+          <h3>"Proactive, creative, and always delivers quality work on time."</h3>
+          <p>Ronit helped us build a stronger online presence through well-planned social media campaigns and engaging
+            creatives. His understanding of consumer psychology helped increase customer engagement and improve our
+            brand visibility.</p>
+          <div class="who"><b>Metro Footwear &amp; Leather Store</b><span>Footwear &amp; leather retail</span></div>
+        </div>
+        <div class="testi">
+          <h3>"His work has consistently generated quality patient enquiries."</h3>
+          <p>Ronit has been instrumental in growing our clinic's digital presence — from designing premium creatives
+            and managing our social media to running performance marketing campaigns. He understands healthcare
+            marketing and knows how to build trust through content.</p>
+          <div class="who"><b>Dr. Prasanna Sawant</b><span>The Perfect Smile Dental Clinic</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section id="process" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal-x">
+        <h2 class="display">Process</h2>
+        <p>The monthly loop every client runs on. Clear steps, clear durations, no surprises.</p>
+      </div>
+      <div class="reveal-x">
+        <div class="phase">
+          <div class="phase-label"><span class="mono">Phase 01</span>
+            <h3>Audit</h3>
+          </div>
+          <div>
+            <div class="step">
+              <div>
+                <h4>Local visibility audit</h4>
+                <p>GMB profile, reviews, NAP consistency, Map Pack position and AI answer-engine presence.</p>
+              </div><span class="dur">2–3 Days</span>
+            </div>
+            <div class="step">
+              <div>
+                <h4>Competitor scan</h4>
+                <p>What nearby clinics and stores rank for, post, and spend on — and where the gaps are.</p>
+              </div><span class="dur">2 Days</span>
+            </div>
+          </div>
+        </div>
+        <div class="phase">
+          <div class="phase-label"><span class="mono">Phase 02</span>
+            <h3>Strategy</h3>
+          </div>
+          <div>
+            <div class="step">
+              <div>
+                <h4>Keyword &amp; content plan</h4>
+                <p>Local keywords mapped to a monthly content calendar in the languages your patients speak.</p>
+              </div><span class="dur">3 Days</span>
+            </div>
+            <div class="step">
+              <div>
+                <h4>Campaign architecture</h4>
+                <p>Ad structure, budget split and the funnel — usually straight into WhatsApp, where India converts.</p>
+              </div><span class="dur">2 Days</span>
+            </div>
+          </div>
+        </div>
+        <div class="phase">
+          <div class="phase-label"><span class="mono">Phase 03</span>
+            <h3>Execute</h3>
+          </div>
+          <div>
+            <div class="step">
+              <div>
+                <h4>Content &amp; campaigns live</h4>
+                <p>Posts, Reels, GMB updates and ads published on schedule. Automations handle the routing.</p>
+              </div><span class="dur">Weekly</span>
+            </div>
+            <div class="step">
+              <div>
+                <h4>Optimization loop</h4>
+                <p>Creative and budget adjusted from real lead quality, not vanity metrics.</p>
+              </div><span class="dur">Ongoing</span>
+            </div>
+          </div>
+        </div>
+        <div class="phase">
+          <div class="phase-label"><span class="mono">Phase 04</span>
+            <h3>Report</h3>
+          </div>
+          <div>
+            <div class="step">
+              <div>
+                <h4>Monthly performance report</h4>
+                <p>One document: what ran, what it cost, what it brought in, what changes next month.</p>
+              </div><span class="dur">Monthly</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal-x">
+        <h2 class="display">Experience</h2>
+        <p>Agency coordination and independent client work — the roles behind the playbooks.</p>
+      </div>
+      <div class="reveal-x">
+        <div class="phase">
+          <div class="phase-label"><span class="mono">2025 — Present</span>
+            <h3>Religiate</h3>
+          </div>
+          <div>
+            <div class="step">
+              <div>
+                <h4>Digital Marketing &amp; Brand Coordinator</h4>
+                <p>Brand and project coordination at Religiate Interactive Brand Consulting — team liaison, social
+                  media management, Google Business Profile optimisation and WhatsApp marketing across 5–6 healthcare
+                  and retail clients.</p>
+              </div><span class="dur">Full-time</span>
+            </div>
+          </div>
+        </div>
+        <div class="phase">
+          <div class="phase-label"><span class="mono">2023 — 2025</span>
+            <h3>Freelance</h3>
+          </div>
+          <div>
+            <div class="step">
+              <div>
+                <h4>Independent Digital Marketer</h4>
+                <p>Meta &amp; Google Ads, social media and local marketing for Aparna Store (10 mo), The Perfect Smile
+                  Dental Clinic (10 mo) and Zawar Dental Clinic (3 mo).</p>
+              </div><span class="dur">2 Years</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="display">Stats<br>&amp; facts</h2>
+        <p>Proof in numbers — because marketing should perform, not just look good.</p>
+      </div>
+      <div class="stats-grid reveal">
+        <div class="stat">
+          <div class="num"><span data-count="3">0</span>+</div>
+          <h3>Years of experience</h3>
+          <p>Agency + freelance work across digital marketing since 2023.</p>
+        </div>
+        <div class="stat">
+          <div class="num"><span data-count="6">0</span>+</div>
+          <h3>Clients managed</h3>
+          <p>Simultaneous accounts across healthcare, dental and retail.</p>
+        </div>
+        <div class="stat">
+          <div class="num"><span data-count="5">0</span></div>
+          <h3>Certifications</h3>
+          <p>Google Digital Marketing, Performance Marketing (Tutedude), HubSpot Social Media, Canva, AWS Prompt
+            Engineering.</p>
+        </div>
+        <!-- <div class="stat">
+          <div class="num"><span data-count="329">0</span></div>
+          <h3>Leads analyzed</h3>
+          <p>Verified CRM records turned into one clean appointment report.</p>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="display">FAQ</h2>
+        <p>Quick answers about working together. Something else? <a href="mailto:ronitshikalgar20599@gmail.com"
+            style="text-decoration:underline">Just ask.</a></p>
+      </div>
+      <div class="reveal">
+        <div class="faq-item">
+          <button class="faq-q"><span><span class="mono">01 </span> What does the monthly retainer include?</span><span
+              class="plus">+</span></button>
+          <div class="faq-a">
+            <p>Ongoing management of your social media and Google Business Profile, one live ad campaign, and a monthly
+              report that shows exactly what ran and what it produced. You can pause or stop anytime.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span><span class="mono">02 </span> Do you only work with healthcare
+              clients?</span><span class="plus">+</span></button>
+          <div class="faq-a">
+            <p>Healthcare and dental are my deepest verticals, but I've also run retail campaigns for footwear and
+              grocery brands. If your customers search locally and message on WhatsApp, the playbook applies.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span><span class="mono">03 </span> Do you work remotely?</span><span
+              class="plus">+</span></button>
+          <div class="faq-a">
+            <p>Yes — most of my clients are in other cities. Everything runs on shared calendars, WhatsApp and monthly
+              reports, so distance has never been a problem.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span><span class="mono">04 </span> How do you report results?</span><span
+              class="plus">+</span></button>
+          <div class="faq-a">
+            <p>One structured monthly document covering social activity, ad performance, GMB insights and keyword
+              positions — the same format I've refined across a year of client reporting.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span><span class="mono">05 </span> Can you create content in Marathi or
+              Hindi?</span><span class="plus">+</span></button>
+          <div class="faq-a">
+            <p>Yes. I produce content in Marathi, Hinglish and English, including patient-education video scripts —
+              regional language is often what makes local campaigns actually work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+    <div class="wrap reveal">
+      <h2 class="display">Let's build your <em>visibility</em></h2>
+      <div class="contact-grid">
+        <div class="contact-list">
+          <a href="mailto:ronitshikalgar20599@gmail.com">ronitshikalgar20599@gmail.com</a>
+          <a href="https://wa.me/919764027570?text=Hi%20Ronit%2C%20I%27d%20like%20to%20discuss%20a%20project."
+            target="_blank" rel="noopener">WhatsApp — +91 97640 27570 ↗</a>
+          <a href="https://linkedin.com/in/ronit-shikalgar-799467371" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <span style="opacity:.6;font-size:17px">Sangli, Maharashtra — working remotely, everywhere</span>
+        </div>
+        <div class="contact-side">
+          <span class="mono">Currently</span>
+          <p>Open to remote digital marketing roles and taking on retainer clients in healthcare and retail.</p>
+          <a class="btn" style="background:var(--oxide)"
+            href="mailto:ronitshikalgar20599@gmail.com?subject=Let's work together"><span class="flip"><span>Make it
+                happen<br>Make it happen</span></span> →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-row">
+      <span>© 2026 Ronit Shikalgar. All rights reserved.</span>
+      <span>Content Strategist &amp; Marketer</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    /* ---------- Clay 3D hero ---------- */
+    (function () {
+      const container = document.getElementById('clay');
+      if (!window.THREE) { return; }
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color(0xEAE5DC);
+      scene.fog = new THREE.Fog(0xEAE5DC, 12, 30);
+
+      const camera = new THREE.PerspectiveCamera(40, innerWidth / innerHeight, .1, 100);
+      camera.position.set(0, 0.4, 11);
+
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+      renderer.setSize(innerWidth, innerHeight);
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      container.appendChild(renderer.domElement);
+
+      /* soft studio lighting = clay render look */
+      scene.add(new THREE.AmbientLight(0xffffff, .65));
+      const key = new THREE.DirectionalLight(0xfff4e8, .9);
+      key.position.set(5, 8, 6);
+      key.castShadow = true;
+      key.shadow.mapSize.set(1024, 1024);
+      key.shadow.radius = 8;
+      scene.add(key);
+      const fill = new THREE.DirectionalLight(0xdde6f0, .35);
+      fill.position.set(-6, 3, -4);
+      scene.add(fill);
+
+      const clay = (hex) => new THREE.MeshStandardMaterial({ color: hex, roughness: .92, metalness: 0 });
+
+      const shapes = [];
+      function add(geo, mat, x, y, z, s, spin) {
+        const m = new THREE.Mesh(geo, mat);
+        m.position.set(x, y, z); m.scale.setScalar(s);
+        m.castShadow = true; m.receiveShadow = true;
+        m.userData = { spin, y0: y, ph: Math.random() * Math.PI * 2 };
+        scene.add(m); shapes.push(m); return m;
+      }
+
+      /* clay composition — matte primitives, pastel palette */
+      add(new THREE.TorusGeometry(1.5, .55, 32, 80), clay(0xA8401E), 3.4, 1.2, -1, 1, .004);
+      add(new THREE.SphereGeometry(1, 48, 48), clay(0x8FA3B8), -3.8, 1.8, -2, 1.15, .003);
+      add(new THREE.CylinderGeometry(.8, .8, 2.2, 48), clay(0x9AA88F), -2.6, -1.4, 0, .9, .005);
+      add(new THREE.TorusKnotGeometry(.8, .3, 120, 20), clay(0xC9A18F), 4.2, -1.6, 1, .8, .006);
+      add(new THREE.SphereGeometry(1, 48, 48), clay(0xD8CFC0), 0, 2.6, -4, .7, .002);
+      add(new THREE.BoxGeometry(1.4, 1.4, 1.4), clay(0x8FA3B8), -5, -.6, -3, .75, .004);
+      add(new THREE.ConeGeometry(.9, 1.8, 48), clay(0xA8401E), -1.2, 3, -3, .6, .005);
+
+      /* soft ground for shadows */
+      const ground = new THREE.Mesh(
+        new THREE.PlaneGeometry(60, 60),
+        new THREE.ShadowMaterial({ opacity: .12 })
+      );
+      ground.rotation.x = -Math.PI / 2;
+      ground.position.y = -3.2;
+      ground.receiveShadow = true;
+      scene.add(ground);
+
+      let mx = 0, my = 0;
+      addEventListener('pointermove', e => {
+        mx = (e.clientX / innerWidth - .5);
+        my = (e.clientY / innerHeight - .5);
+      });
+
+      let t = 0;
+      function tick() {
+        requestAnimationFrame(tick);
+        t += .016;
+        shapes.forEach(s => {
+          if (!reduced) {
+            s.rotation.x += s.userData.spin;
+            s.rotation.y += s.userData.spin * 1.4;
+            s.position.y = s.userData.y0 + Math.sin(t + s.userData.ph) * .25;
+          }
+        });
+        camera.position.x += ((mx * 1.2) - camera.position.x) * .04;
+        camera.position.y += ((.4 - my * .8) - camera.position.y) * .04;
+        camera.lookAt(0, .2, 0);
+        renderer.render(scene, camera);
+      }
+      tick();
+
+      addEventListener('resize', () => {
+        camera.aspect = innerWidth / innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(innerWidth, innerHeight);
+      });
+    })();
+
+    /* ---------- scroll reveal ---------- */
+    const io = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal, .reveal-x').forEach(el => io.observe(el));
+
+    /* ---------- count-up ---------- */
+    const co = new IntersectionObserver(es => {
+      es.forEach(e => {
+        if (!e.isIntersecting) return;
+        co.unobserve(e.target);
+        const el = e.target, end = +el.dataset.count, dur = 1400, t0 = performance.now();
+        const suffixNode = el.querySelector('small');
+        const suffix = suffixNode ? suffixNode.outerHTML : '';
+        function step(now) {
+          const p = Math.min((now - t0) / dur, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.innerHTML = Math.round(end * eased) + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    }, { threshold: .5 });
+    document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
+
+    /* ---------- FAQ accordion ---------- */
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const open = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!open) item.classList.add('open');
+      });
+    });
+
+    /* ---------- mobile menu ---------- */
+    const navEl = document.querySelector('nav'), menuBtn = document.querySelector('.menu-btn');
+    menuBtn.addEventListener('click', () => {
+      const open = navEl.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open);
+      menuBtn.textContent = open ? 'Close' : 'Menu';
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+      navEl.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = 'Menu';
+    }));
+  </script>
+</body>
+
+</html>
